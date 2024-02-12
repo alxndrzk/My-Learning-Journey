@@ -1,0 +1,57 @@
+TWO SUM
+
+- menggunakan hashmap agar lebih efektif dalam pengunaan memori dan tidak memakan waktu terlalu lama
+
+- ketika menggunakan hashmap, program hanya akan melakukan pengecekan iterasi atau perulangan satu kali saja
+
+- iterasi di angka sebelumnya tidak akan dilakukan pengecekan lagi karena perulangan sebelumnya sudah mewakili hal tersebut. contohnya pada perulangan pertama di index ke-0 program akan melakukan pengecekan secara menyeleruh
+pada perulangan yang kedua, di index ke-1 program akan melakukan pengecekan langsung didepannya tanpa melakukan pengecekan di index ke-0. karena index-0 sudah masuk hashmap dan sudah dilakukan pengecekan
+hal ini dapat dilakukan dengan menggunakan hashmap
+
+PROSES LOGIKA BERJALAN
+
+1. kondisi awal adalah terdapat array dan target. lalu hashmap disini belum diinisialisasi atau masih kosong
+
+2. prosesnya adalah setiap angka pada array akan dilakukan perhitungan terlebih dahulu dengan rumus, 
+	Target = a + b
+	Target - a = b
+alasannya agar mempermudah untuk mencari pasangannya
+
+3. ketika perhitungan selesai dilakukan. akan dilakukan pengecekan apakah hasil angka yang dicari ada pasangannya (b) di hashmap. kalo tidak ada maka nilai dan index tersebut akan masuk kedalam hashmap
+
+4. selanjutnya akan memasuki iterasi yang kedua yaitu di index 1 atau index selanjutnya. proses no 2 dan 3 akan dilakukan lagi
+
+5. ketika proses no 3 dilakukan dan ditemukan adanya pasangan yang ada di hashmap. maka program akan mereturn pasangan dari target yang cocok
+
+
+KOTLIN
+```
+class Solution {
+    fun twoSum(nums: IntArray, target: Int): IntArray {
+    val map = HashMap<Int, Int>()
+    for (i in nums.indices) {
+        val complement = target - nums[i]
+        if (map.containsKey(complement)) {
+            return intArrayOf(map[complement]!!, i)
+        }
+        map[nums[i]] = i
+    }
+    throw IllegalArgumentException("No two sum solution")    
+    }
+}
+```
+
+
+PYTHON
+```
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        prevMap = {} # val : index
+
+        for i, n in enumerate (nums) :
+            diff = target - n
+            if diff in prevMap : 
+                return [prevMap[diff], i]
+            prevMap [n] = i
+        return 
+```
