@@ -1,0 +1,437 @@
+:root {
+    --font-utama: 'Roboto', sans-serif;
+    --font-quotes: 'Rubik', sans-serif;
+    --bg-utama: #6962AD;
+    --bg-second: #B6BBC4;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-utama);
+}
+
+header {
+    margin-bottom: 3%;
+    padding-bottom: 5%;
+    background-color: var(--bg-utama);
+}
+
+header nav {
+    border: 1px solid var(--bg-second);
+    background-color: var(--bg-second);
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+header nav a img {
+    margin-left: 20px;
+    width: auto;
+    height: 100px;
+}
+
+header nav ul {
+    display: inline-flex;
+    flex-basis: 1rem;
+}
+
+header nav ul li {
+    font-size: 40px;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    margin: 0 20px 0 20px;
+}
+
+header nav ul li a:hover {
+    background-color: var(--bg-utama);
+    opacity: 0.6;
+    color: blue;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+header nav .sidebar {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    background-color: var(--bg-second);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px var(--bg-second);
+    height: 100vh;
+    width: 250px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+header nav .sidebar ul li {
+    width: 100%;
+}
+
+header nav .sidebar ul li a {
+    width: 100%;
+}
+
+header nav .menu-btn {
+    display: none;
+}
+
+header .header-content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 7%;
+}
+
+header .header-content .headerp {
+    margin-top: 5%;
+}
+
+header .header-content .headerp p {
+    font-size: 75px;
+}
+
+header .header-content .headerp .sec-p {
+    font-family: var(--font-quotes);
+    font-size: 40px;
+}
+
+header .header-content img {
+    width: 700px;
+    height: 800px;
+}
+
+main {
+    display: flex;
+    gap: 1.5rem;
+}
+
+main .content {
+    flex: 5;
+}
+
+main .content #background {
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+main .content #background h2 {
+    font-size: 65px;
+}
+
+main .content #background .content-background {
+    display: flex;
+    justify-content: space-around;
+}
+
+main .content #background .content-background ul {
+    width: 600px;
+    text-align: left;
+    text-align: justify;
+}
+
+main .content #tips h2 {
+    text-align: center;
+    font-size: 65px;
+}
+
+main .content #tips .tips {
+    text-align: center;
+    justify-content: space-around;
+}
+
+main .content #skills {
+    margin-bottom: 25px;
+}
+
+main .content #skills h2 {
+    text-align: center;
+    font-size: 65px;
+}
+
+main .content #skills p {
+    text-align: justify;
+}
+
+main .content #skills .skill1-2, .skill3-4 {
+    display: flex;
+    justify-content: center;
+}
+
+main .content #skills .skill1-2 .skill-1, .skill-2, .skill3-4 .skill-3, .skill-4 {
+    width: 350px;
+    height: 340px;
+    padding: 15px;
+    margin: 0 20px 20px 20px;
+    border: 1px solid var(--bg-second);
+    background-color: var(--bg-second);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+main .content #skills .skill1-2 .skill-1:hover, .skill-2:hover, .skill3-4 .skill-3:hover, .skill-4:hover {
+    box-shadow: 0 0 10px 5px var(--bg-utama);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+main .content #skills .skill3-4 .skill-3, .skill-4 {
+    margin-top: 20px;
+}
+
+main .content #skins h2 {
+    text-align: center;
+    font-size: 65px;
+}
+
+main .content #skins img {
+    width: 350px;
+    height: 350px;
+}
+
+main .content #skins .skin-top, .skin-mid, .skin-bot {
+    display: flex;
+    justify-content: space-around;
+}
+
+main .content #skins .skin-top .skins-1, .skins-2, .skins-3, .skin-mid .skins-4, .skins-5, .skins-6 {
+    border: 1px solid black;
+    box-shadow: 0 0 5px 5px black;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--bg-second);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+main .content #skins .skin-top .skins-1:hover, .skins-2:hover, .skins-3:hover, .skin-mid .skins-4:hover, .skins-5:hover, .skins-6:hover {
+    border: 1px solid var(--bg-utama);
+    box-shadow: 0 0 10px 5px var(--bg-utama);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+main .content #skins .skin-mid {
+    margin-bottom: 20px;
+}
+
+main .content #skins p {
+    text-align: center;
+    font-size: 20px;
+}
+
+main aside {
+    flex: 1;
+    border: 1px solid black;
+    box-shadow: 0 0 5px 5px black;
+    padding: 10px;
+    margin-right: 20px;
+    text-align: center;
+    background-color: var(--bg-second);
+    width: 25%;
+    height: 600px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+main aside figure img {
+    width: 400px;
+    height: 400px;
+}
+
+main aside p {
+    font-family: var(--font-quotes);
+    font-weight: 50px;
+    text-align: center;
+}
+
+footer {
+    font-size: 30px;
+    margin-top: 20px;
+    padding: 6% 0 10% 0;
+    text-align: center;
+    background-color: var(--bg-utama);
+}
+
+footer img {
+    width: 600px;
+    height: 400px;
+}
+
+footer section {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    margin-top: 50px;
+}
+
+footer section p:hover {
+    background-color: var(--bg-second);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+@media (max-width: 1784px) {
+    main aside {
+        display: none;
+    }
+}
+
+@media (max-width: 1300px) {
+    main .content #skins .skin-top, .skin-mid {
+        display: block;
+        flex-direction: column;
+    }
+    main .content #skins .skin-top .skins-1, .skins-2, .skins-3, .skin-mid .skins-4, .skins-5, .skins-6 {
+        width: 500px;
+        height: 700px;
+        margin: 80px auto 80px auto;
+    }
+    main .content #skins img {
+        width: 500px;
+        height: 600px;
+    }
+    footer section {
+        display: block;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1100px) {
+    header nav ul .hideOnMobile {
+        display: none;
+    }
+    header nav .menu-btn {
+        display: block;
+    }
+    header nav .sidebar {
+        width: 500px;
+    }
+    header .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+    header .header-content .headerp p {
+        font-size: 60px;
+        text-align: center;
+        font-weight: bold;
+    }
+    main .content #summary .content-summary {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    main .content #background .content-summary img, .stat img{
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    main .content #skills .skill1-2 .skill-1, .skill-2, .skill3-4 .skill-3, .skill-4 {
+        width: 350px;
+        height: 500px;
+        margin: 30px auto 30px auto;
+    }
+    main ,.content #skills .skill3-4 .skill-3 {
+        margin-bottom: 50px;
+    }
+    main .content #skills .skill-2, .skill3-4 {
+        display: block;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 800px) {
+    header .header-content .headerp p {
+        font-size: 20px;
+    }
+    header .header-content .headerp .sec-p {
+        font-size: 25px;
+    }
+    header .header-content img {
+        width: 250px;
+        height: 400px;
+    }
+    main {
+        display: block;
+    }
+    main .content {
+        width: 100%;
+    }
+    main .content #background .content-summary {
+        width: 350px;
+    }
+    main .content p {
+        font-size: 15px;
+    }
+    main .content #tips .stat {
+        margin: auto 20px auto 20px;
+    }
+    main .content #skills .skill1-2 .skill-1, .skill-2, .skill3-4 .skill-3, .skill-4 {
+        width: 270px;
+        height: 350px;
+    }
+    main .content #skins img {
+        width: 300px;
+        height: 400px;
+    }
+    main .content #skins .skin-top .skins-1, .skins-2, .skins-3, .skin-mid .skins-4, .skins-5, .skins-6 {
+        width: 300px;
+        height: 500px;
+        margin: 50px auto 50px auto;
+    }
+    main .content #skins .skin-top .skins-1:hover, .skins-2:hover, .skins-3:hover, .skin-mid .skins-4:hover, .skins-5:hover, .skins-6:hover {
+        border: 1px solid var(--bg-utama);
+        box-shadow: 0 0 10px 5px var(--bg-utama);
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+    main aside {
+        display: none;
+    }
+    footer img {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    header nav .sidebar {
+        width: 100%;
+    }
+}
